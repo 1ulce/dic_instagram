@@ -43,3 +43,27 @@ group :development, :test do
   gem 'spring'
 end
 
+#### 1ulce add  ###
+  gem 'twitter-bootstrap-rails'
+  gem 'jquery-turbolinks'
+  gem 'rails_12factor', group: :production
+  gem 'devise'
+  gem 'faker'
+  group :development do
+    gem 'letter_opener_web'
+    gem 'dotenv-rails'
+  end
+  gem 'therubyracer', platforms: :ruby
+  gem 'rails_admin'
+  gem 'cancan'
+
+  group :development, :test do
+    gem 'pry-rails'
+    gem 'better_errors'
+  end
+  gem 'omniauth'
+  gem 'omniauth-twitter'
+  gem 'omniauth-facebook'
+  gem 'carrierwave'
+  gem 'rmagick'
+#### 1ulce add end #########
