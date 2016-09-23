@@ -1,6 +1,8 @@
 module ApplicationHelper
   def picture_img(image)
-    image_tag(image, alt: "picute")
+    return image_tag(image, alt: "picute") if image.url != nil
+    img_url = 'no_image.png'
+    image_tag(img_url, alt: "picture")
   end
   def profile_img(user)
     return image_tag(user.avatar, alt: user.name) if user.avatar?
