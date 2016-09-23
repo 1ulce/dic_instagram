@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable, :omniauthable
   has_many :pictures
+  validates :name, presence: true
+  validates :email, presence: true
+
   mount_uploader :avatar, ImageUploader
   def update_with_password(params, *options)
     if provider.blank?
