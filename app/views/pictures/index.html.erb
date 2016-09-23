@@ -1,19 +1,28 @@
-<%= render 'header' %>
 <div class= "content-page">
   <div class="contents container">
-    <%= link_to "画像を投稿する", new_picture_path, class: 'btn btn-default' %>
+    <div class="post-picture">
+      <%= link_to "写真を投稿する", new_picture_path, class: 'btn btn-default' %>
+    </div>
     <div class= "row top-row">
+      <div class="col-md-2 hidden-sm hidden-xs">
+      </div>
       <% @pictures.each do |picture| %>
-        <div class="col-md-6 col-sm-12">
+        <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1">
           <article class="row">
-            
-            <div class="col-sm-5 col-sm-offset-1">
+            <header>
+              <%= profile_img(picture.user) if profile_img(picture.user) %>
+              <p><%= picture.user.name %></p>
+            </header>
+            <div class="picture">
               <%= picture_img(picture.image.thumb) if picture_img(picture.image.thumb) %>
             </div>
-            <div class="col-sm-6">
-              <p> by <%= picture.user.name %> </p>
-              <%= link_to "編集", edit_picture_path(picture.id), class: 'btn btn-default btn-sm btn-success' %>
-              <%= link_to "削除", picture_path(picture.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger' %>
+            <div class="row option">
+              <div class="col-xs-6 ">
+                <%= link_to "変更", edit_picture_path(picture.id), class: 'btn btn-default btn-sm btn-success' %>
+              </div>
+              <div class="col-xs-6">
+                <%= link_to "削除", picture_path(picture.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger' %>
+              </div>
             </div>
           </article>
         </div>

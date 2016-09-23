@@ -1,3 +1,47 @@
 // Place all the styles related to the pictures controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.content-page{
+  .post-picture{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    .btn{
+      color: #fff;
+      background-color: #3f729b;
+    }
+  }
+  .col-md-offset-0{
+    margin-right: 20px;
+  }
+  .col-md-2.hidden-sm{
+    height: 10000000000000000px;
+  }
+  article{
+    background-color: #fff;
+    border: 1px solid #efefef;
+    border-radius: 1px;
+    header{
+      margin-top: 5px;
+      margin-bottom: 5px;
+      img{
+        height: 24px;
+        width: 24px;
+        float: left;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      p{
+        line-height: 26px;
+        margin-bottom: 0px;
+        text-align: left;
+      }
+    }
+    .picture img{
+      width: 100%;
+    }
+    .option {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}

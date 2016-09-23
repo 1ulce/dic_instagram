@@ -13,6 +13,10 @@
       <p><%= notice %></p>
     </div>
   <% end %>
+  <% if current_page?(root_url) %>
+  <% else %>
+    <%= render 'shared/header' %>
+  <% end%>
   <%= yield %>
   <footer>
     <p>るか by Dive into Code</p>
