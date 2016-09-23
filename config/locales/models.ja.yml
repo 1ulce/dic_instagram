@@ -7,6 +7,7 @@ ja:
       picture:
         image: "画像"
       user:
+        admin: "管理者"
         title: "タイトル"
         name: "名前"
         email: "メールアドレス"
