@@ -1,0 +1,36 @@
+<header>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header row">
+        <a href= "/"><span class="lnr lnr-home"></span><span class="header-word col-xs-0">ホーム</span></a>
+        <span class="lnr lnr-alarm"></span><span class="header-word">通知</span>
+        <span class="lnr lnr-envelope"></span><span class="header-word">メッセージ</span>
+      </div>
+      <div class="nav-right">
+        <ul class="nav navbar-nav">
+          <span class="lnr lnr-magnifier"></span>
+          <a class="btn btn-default btn-sm btn-info" href= "/tweets/new"><span class="lnr lnr-pencil"></span><span class="header-word">ツイート</span></a>
+          <li><%= link_to "写真", pictures_path %></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+              <% if user_signed_in? %>
+                <li><%= link_to 'マイページ', edit_user_registration_path %></li>
+                <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                <li><%= link_to 'ログイン', new_user_session_path %></li>
+                <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+      <h1 class="lnr lnr-diamond top-icon"></h1>
+    </div><!-- /.container-fluid -->
+  </nav>
+</header>

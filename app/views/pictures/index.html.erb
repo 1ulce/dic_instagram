@@ -1,0 +1,19 @@
+<%= render 'header' %>
+<div class= "content-page">
+  <div class="contents container">
+    <div class= "row top-row">
+      <div class="col-md-4 col-sm-12">
+          <%= link_to "画像を投稿する", new_picture_path, class: 'btn btn-default' %>
+          <% @pictures.each do |picture| %>
+            <article>
+              <div class="dashboard dashboard-left">
+                <%= picture_img(picture.image.thumb) if picture_img(picture.image.thumb) %>
+                <%= link_to "編集", edit_picture_path(picture.id), class: 'btn btn-default btn-sm btn-success' %>
+                <%= link_to "削除", picture_path(picture.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger' %>
+              </div>
+          </article>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>

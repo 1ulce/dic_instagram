@@ -39,8 +39,10 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
   ######### 1ulce add #############
-  config.action_mailer.default_url_options = { host: 'localhost:3000' }
   config.action_mailer.delivery_method = :letter_opener_web
-  BetterErrors::Middleware.allow_ip! "0.0.0.0/0"  
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  BetterErrors::Middleware.allow_ip! "0.0.0.0/0"
+  # falseだと、ローカルで404エラーとか見れる。trueだと見れない。普通はtrue。本番のみfalse
+  config.consider_all_requests_local = true 
   ######### 1ulce add end #########
 end

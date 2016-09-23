@@ -1,0 +1,25 @@
+html{
+  height: 100%;
+  background-color: #fafafa
+}
+body{
+  background-color: #fafafa
+}
+.top-page .container{
+  margin-top: 30px;
+  .top-row{
+    .dashboard-left{
+      background-image: url('/assets/mobile.png');
+      background-position: 0 0;
+      background-size: 454px 618px;
+      height: 618px;
+    }
+    .dashboard-right{
+      background-color: #fff;
+      border: 1px solid #efefef;
+      border-radius: 1px;
+      margin: 0 0 10px;
+      padding: 10px 0;
+    }
+  }
+}
