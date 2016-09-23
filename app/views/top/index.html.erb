@@ -8,8 +8,8 @@
       <div class="col-md-8 col-sm-5">
         <div class="tw-fb-login-or-sign-up dashboard-right">
           <h2>お気に入りの写真でアッと言わせよう</h2>
-          <button>Twitterでログイン</button>
-          <button>Facebookでログイン</button>
+          <button><a href="/users/auth/twitter">Twitterでログイン</a></button>
+          <button><a href="/users/auth/facebook">Facebookでログイン</a></button>
           <p>--または--</p>
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
             <%= devise_error_messages! %>
