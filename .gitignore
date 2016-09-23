@@ -13,3 +13,4 @@
 /tmp
 .env
 /vendor/bundle
+/public/uploads
