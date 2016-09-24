@@ -5,7 +5,7 @@ last_user_id = User.last.id
   password = "password"
   name = Faker::Name.name 
   uid = SecureRandom.uuid
-  User.create!(
+  user = User.create!(
     name: name,
     email: email,
     password: password,
@@ -13,8 +13,9 @@ last_user_id = User.last.id
     uid: uid,
     )
 
-  Picture.create!(
+  user.pictures.create!(
     image: open("#{Rails.root}/db/data/sample.png"),
     user_id: last_user_id + 1 + n,
     )
+  user.save
 end
