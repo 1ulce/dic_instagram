@@ -9,7 +9,11 @@
 </head>
 <body>
   <% if notice %>
-    <div class= "alert alert-success" role="alert">
+    <% if current_page?(root_url) %>
+      <div class= "alert alert-success top-alert" role="alert">
+    <% else %>
+      <div class= "alert alert-success" role="alert">
+    <% end %>
       <p><%= notice %></p>
     </div>
   <% end %>
