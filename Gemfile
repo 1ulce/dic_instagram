@@ -1,10 +1,11 @@
+ruby '2.6.5'
 source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.3'
+gem 'rails', '4.2.11.3'
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'pg', '~> 0.18'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -66,4 +67,5 @@ end
   gem 'omniauth-facebook'
   gem 'carrierwave'
   gem 'rmagick'
+  gem 'json'
 #### 1ulce add end #########
